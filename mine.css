@@ -1,0 +1,102 @@
+body {
+    background-color:plum;
+    color: midnightblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+}
+p{
+    text-align:center right;
+    font-size:20px;
+    line-height: 1.6em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+pre.box {
+    border-style: inset;
+    border-block-color: rgb(100, 64, 184);
+    width:20%
+}
+.Table
+    {
+        display: table;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center right;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+.container {
+    width: 80%;
+    line-height: 1.6em;
+    overflow: hidden;
+}
+
+#links {
+    background-color: rgb(107, 45, 45);
+    color: rgb(52, 45, 151);
+    line-height:0.6em;
+}
+
+#links li {
+    display: inline;
+}
+#links a {
+    color: cadetblue;
+    font-size:20px;
+    text-align:center left;
+    padding-right:30px;
+}
+
+#showcase {
+    background-image: url(../images/pizza2.jpg);
+    min-height:300px;
+    text-align: center right;
+}
+#sidebar.text{
+    position: relative;
+    text-align: inherit;
+    min-height:10px;
+    width: 60%;
+    color:black;
+    font-size:5px;
+    
+}
+
+#showcase h1 {
+    color:rgb(211, 99, 24);
+    font-size:50px;
+    font-family: cursive;
+}
+
+#main-area {
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    float:right;
+    width: 30%;
+    color:black;
+    font-size:5px
+    padding:10px;
+}
+
+#main-footer {
+    background: black;
+    color:wheat;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
