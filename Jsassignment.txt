@@ -1,0 +1,281 @@
+
+Array methods
+
+var a=[10,17,18,14,15]
+
+push:
+a.push(20)
+6
+a
+(6) [10, 17, 18, 14, 15, 20]
+
+
+pop:
+a.pop()
+20
+a
+(5) [10, 17, 18, 14, 15]
+
+sort:
+a.sort()
+(5) [10, 14, 15, 17, 18]
+a
+(5) [10, 14, 15, 17, 18]
+
+
+reverse:
+a.reverse()
+(5) [18, 17, 15, 14, 10]
+a
+(5) [18, 17, 15, 14, 10]
+
+
+concat:
+var b=[2,3,4,5]
+a.concat(b)
+(9) [18, 17, 15, 14, 10, 2, 3, 4, 5]
+console.log(a)
+(5) [18, 17, 15, 14, 10]
+a=a.concat(b)
+(9) [18, 17, 15, 14, 10, 2, 3, 4, 5]
+console.log(a)
+(9) [18, 17, 15, 14, 10, 2, 3, 4, 5]
+
+
+shift:
+a.shift()
+18
+console.log(a)
+(8) [17, 15, 14, 10, 2, 3, 4, 5]
+
+
+unshift:
+a.unshift()
+8
+console.log(a)
+ (8) [17, 15, 14, 10, 2, 3, 4, 5]
+a.unshift(18)
+9
+console.log(a)
+ (9) [18, 17, 15, 14, 10, 2, 3, 4, 5]
+
+
+splice:
+removing elements:
+a.splice(1,3)
+(3) [17, 15, 14]
+console.log(a)
+(6) [18, 10, 2, 3, 4, 5]
+
+adding elements:
+a.splice(1,0,17,14,15)
+[]
+console.log(a)
+ (9) [18, 17, 14, 15, 10, 2, 3, 4, 5]
+
+toString:
+ a.toString()
+"18,17,14,15,10,2,3,4,5"
+console.log(a)
+ (9) [18, 17, 14, 15, 10, 2, 3, 4, 5]
+
+slice:
+a.slice(2,4)
+(2) [14, 15]
+console.log(a)
+ (9) [18, 17, 14, 15, 10, 2, 3, 4, 5]
+
+
+lastIndexOf:
+
+a.push(15)
+10
+console.log(a)
+ (10) [18, 17, 14, 15, 10, 2, 3, 4, 5, 15]
+undefined
+a.lastIndexOf(15)
+9
+
+indexOf:
+a.indexOf(15)
+3
+a.pop()
+15
+
+
+every:
+console.log(a)
+ (9) [18, 17, 14, 15, 10, 2, 3, 4, 5]
+a.every(function(element){ return element>10});
+false
+a.every(function(element){ return element>=2});
+true
+
+some:
+a.some(function(element){ return element>10});
+true
+a.some(function(element){ return element>2});
+true
+
+filter:
+a.filter(function(element,index){
+    return (element>5)?true:false})
+(5) [18, 17, 14, 15, 10]
+a
+(9) [18, 17, 14, 15, 10, 2, 3, 4, 5]
+a=a.filter(function(element,index){
+    return (element>5)?true:false})
+(5) [18, 17, 14, 15, 10]
+a
+(5) [18, 17, 14, 15, 10]
+a.filter(function(element,index){
+    return (index,element>10)?true:false})
+(4) [18, 17, 14, 15]
+a
+(5) [18, 17, 14, 15, 10]
+
+
+map:
+a.map(element=>element*2)
+(5) [36, 34, 28, 30, 20]
+a.map(function(element,index){return(index)})
+(5) [0, 1, 2, 3, 4]
+a.map(function(element,index){return(element)})
+(5) [18, 17, 14, 15, 10]
+
+ forEach:
+ arr.forEach((element)=>console.log(element));
+ 18
+ 17
+ 14
+ 15
+ 10
+
+
+
+var az=['1','2','3','4','5']
+
+reduce:
+a13.reduce(function(acc,value){return (acc+value)});
+74
+az.reduce(function(val,val1){
+    return val+val1})
+"12345"
+
+reduceRight:
+az.reduceRight(function(val,val1){
+    return val+val1})
+"54321"
+
+join:
+console.log(az.join('-'));
+ 1-2-3-4-5
+undefined
+console.log(a.join('-'));
+ 18-17-14-15-10
+
+
+function hi()
+{
+    console.log("hi");
+}
+
+toSource:
+
+hi.toSource();
+
+"function hi()
+{
+    console.log("hi");
+}"
+
+
+
+Regex methods:
+
+split:
+abc.split(' ');
+(4) ["hey", "good", "morning", "guys"]
+
+replace:
+abc.replace(' ','$');
+"hey$good morning guys"
+
+search:
+abc.search('good');
+4
+abc.search('god');
+-1
+abc.search(/g[aeiou]+t/);
+4
+
+
+test:
+re=/f[aeiou]+m/
+/f[aeiou]+m/
+re.test("the foam good");
+true
+re.test("the flaam good");
+false
+
+exec:
+var re=/g[aeiou]+d/.exec("hi good morning");
+console.log(re);
+["good", index: 3, input: "hi good morning", groups: undefined]
+
+var re=/g[aeiou]+d/.exec("hi morning");
+console.log(re);
+ null
+
+
+match:
+ var a='hi good mornin, have a good day';
+var re=/g[aeiou]+d/;
+var found=a.match(re);
+console.log(found);
+ ["good", index: 3, input: "hi good mornin, have a good day", groups: undefined]undefined
+
+var a1="It is a prime number";
+a1.match("number");
+["number", index: 14, input: "It is a prime number", groups: undefined]
+
+var a='hi good mornin, have a good day';
+var re=/g[aeiou]+d/g;
+var found=a.match(re);
+console.log(found[1]);
+good
+
+
+Difference between \n and \r
+
+\n is Line feed and \r is carriage value. 
+If \n is given the cursor moves to the beginning of next line
+If \r is given cursor moves to the beginning of current line
+
+
+
+1.
+var input=prompt("enter the sentence");
+var reg=/^The.*hello$/i;
+var reg1=/h[aeiou]?.t/;
+reg.test(input);
+reg1.test(input);
+
+
+
+2.
+var v=[10,17,18,14,15];
+v=v.filter(function(element,index){
+    return (index,element>15)?true:false});
+(2) [17, 18]
+
+v.map(function(element,index){ console.log(index,element)});
+ 0 17
+ 1 18
+
+v=v.map(element=>element*10);
+(2) [170, 180]
+
+v.map(function(element,index){ console.log(index,element)});
+ 0 170
+ 1 180
