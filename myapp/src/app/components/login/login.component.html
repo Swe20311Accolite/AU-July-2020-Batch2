@@ -1,0 +1,17 @@
+<p>login Form</p>
+
+<form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+    <label>Name:
+        <input type="text" formControlName="fullname" required>
+    </label>
+    <label>Email_id:
+        <input type="email" formControlName="email_id" required>
+    </label>
+    <label> Street:
+        <input type="text" formControlName="street" required>
+</label>
+<label> City:
+    <input type="text" formControlName="city" required>
+</label>
+    <button type="submit" [disabled]="!loginform.valid">Submit</button>
+</form>

@@ -1,0 +1,28 @@
+<h4>Flat Map:</h4>
+<p>Returns an Observable that emits the result of applying the projection function
+    to each item emitted by the source Observable and merges the results of the Observables
+    which is obtained from this transformation.</p>
+
+<h4>Concat Map:</h4>
+<p>concatMap takes value from each form and transforms it into a save HTTP Observable which is called an inner Observable
+    and then subscribes to the inner Observable and sends its output to the result Observable
+    a second form value might come faster than what it takes to save the previous form value in the backend
+    If that happens, that new form value will not be immediately mapped to an HTTP request</p>
+
+<h4>Switch Map:</h4>
+ <p>
+        switchMap is a combination of switchAll and map. 
+        SwitchAll cancels the previous subscription and subscribes to the new one.
+</p>
+<h4>Exhaust Map:</h4>
+<p>
+    We use exhaust map to simply ignore the events in the from the outer stream, 
+    during the execution of the inner stream. 
+    This could be useful when we want to minimize the number of HTTP calls going out from the browser
+</p>
+
+<h4>ViewEncapsulation</h4>
+<p>Defines template and style encapsulation options available for Component's Component.
+    Dafault it has no shadow DOM but provides style encapsulation by adding the host elementattribute 
+    to all selectors.
+</p>
