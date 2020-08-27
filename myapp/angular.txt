@@ -1,1 +1,2 @@
 https://github.com/Swe20311Accolite/angular-assignment.git
+https://swe20311accolite.github.io/angular-assignment/
